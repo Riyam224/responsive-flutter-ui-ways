@@ -13,34 +13,41 @@ Responsive design is crucial for building applications that look great on variou
   final height = MediaQuery.of(context).size.height;
   ```
 
-2. flutter_screenutil Package
-   Description: Simplifies responsive sizing based on screen dimensions.
+## 2. flutter_screenutil Package
 
-dependencies:
-flutter_screenutil: ^5.0.0 # Check for the latest version
+Description: Simplifies responsive sizing based on screen dimensions.
 
-ScreenUtilInit(
-designSize: Size(375, 812), // Your design size here
+`dependencies: flutter_screenutil: ^5.0.0 # Check for the latest version`
+
+```ScreenUtilInit( designSize: Size(375, 812), // Your design size here
 builder: (context, child) {
 return MaterialApp(home: MyHomePage());
 },
 );
+`
 
 width: 100.w; // Responsive width
 height: 100.h; // Responsive height
 fontSize: 20.sp; // Responsive text size
 
-3. LayoutBuilder
+```
 
+## 3. LayoutBuilder
+
+```
 LayoutBuilder(
 builder: (context, constraints) {
 return Container(width: constraints.maxWidth > 600 ? 300 : 200);
 },
 );
 
-4. FittedBox
+```
 
+## 4. FittedBox
+
+```
 FittedBox(
 fit: BoxFit.cover,
 child: Text('Responsive Text'),
 );
+```
